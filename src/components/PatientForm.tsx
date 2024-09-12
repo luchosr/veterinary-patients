@@ -1,14 +1,15 @@
 import { useForm } from 'react-hook-form';
 import Error from './Error';
+import { DraftPatient } from '../types';
 
 export default function PatientForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<DraftPatient>();
 
-  const registerPatient = (data) => {
+  const registerPatient = (data: DraftPatient) => {
     console.log(data);
   };
   return (
@@ -36,17 +37,9 @@ export default function PatientForm() {
             placeholder="Nombre del Paciente"
             {...register('name', {
               required: 'El nombre del paciente  es obligatorio',
-              maxLength: {
-                value: 8,
-                message:
-                  'El nombre del paciente no puede ser mayor a 8 caracteres',
-              },
             })}
           />
           {errors.name && <Error>{errors.name?.message?.toString()}</Error>}
-          {errors.maxLenght && (
-            <Error>{errors.maxLenght?.message?.toString()}</Error>
-          )}
         </div>
 
         <div className="mb-5">
