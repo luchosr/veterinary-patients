@@ -4,7 +4,7 @@
 
 - This is an app to keep track of veterinary patients, you can create a ticket with the patient's status, edit it and delete it.
 
-- I used React.js with React Toastify for notifications, with TypeScript to avoid type-related errors at compile time and produce secure code, as well as sharing data between all components of the app, and TailwindCSS for styling as it is a very fast way to apply styles in code.
+- I used React.js with React Toastify for notifications and React Hooks Form for validations, with TypeScript to avoid type-related errors at compile time and produce secure code, as well as Zustand for sharing data between all components of the app, and TailwindCSS for styling as it is a very fast way to apply styles in code.
 
 ## How to Install and Run the Project
 
